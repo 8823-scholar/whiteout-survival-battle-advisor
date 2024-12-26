@@ -20,4 +20,6 @@ RUN npm ci
 
 ADD . .
 
+RUN npm run build
+
 CMD ["npm", "run", "start"]
