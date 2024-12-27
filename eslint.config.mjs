@@ -13,6 +13,39 @@ const compat = new FlatCompat({
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   ...tailwind.configs["flat/recommended"],
+  {
+    rules: {
+      "object-curly-spacing": ["error", "always"],
+      "import/order": [
+        "error",
+        {
+          "groups": ["builtin", "external", "internal", ["parent", "sibling", "index"]],
+          "newlines-between": "always",
+          "pathGroups": [
+            {
+              "pattern": "react",
+              "group": "builtin",
+            },
+            {
+              "pattern": "~/**",
+              "group": "internal",
+              "position": "after",
+            },
+            {
+              "pattern": "shared/**",
+              "group": "internal",
+              "position": "before",
+            },
+          ],
+          "alphabetize": {
+            "order": "asc",
+            "caseInsensitive": true
+          },
+          "pathGroupsExcludedImportTypes": [],
+        }
+      ],
+    },
+  },
 ];
 
 export default eslintConfig;

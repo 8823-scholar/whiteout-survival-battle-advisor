@@ -1,11 +1,7 @@
+import { BattleAdvisorPage } from "@/pages/BattleAdvisorPage";
+
 const Page = () => {
-  return (
-    <div>
-      <h1 className="text-clip text-lg font-bold">
-        ホワサババトルシミュレータ
-      </h1>
-    </div>
-  );
+  return <BattleAdvisorPage />;
 };
 
 export default Page;
