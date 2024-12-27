@@ -1,5 +1,6 @@
 import { dirname } from "path";
 import { fileURLToPath } from "url";
+
 import { FlatCompat } from "@eslint/eslintrc";
 import tailwind from "eslint-plugin-tailwindcss";
 
@@ -14,6 +15,11 @@ const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   ...tailwind.configs["flat/recommended"],
   {
+    settings: {
+      tailwindcss: {
+        callees: ["classnames", "twClassNames"],
+      },
+    },
     rules: {
       "object-curly-spacing": ["error", "always"],
       "import/order": [

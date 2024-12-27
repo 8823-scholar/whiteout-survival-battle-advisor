@@ -7,12 +7,13 @@ export const BattleAdvisorPage = () => {
 
   return (
     <div>
-      <h1 className="text-lg font-bold">
+      <h1 className="p-4 text-center text-lg font-bold">
         ホワサババトルシミュレータ
       </h1>
       <BattleAdvisorForm
         form={form}
         fields={fields}
+        className="p-4"
       />
     </div>
   );

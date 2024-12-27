@@ -16,7 +16,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="https://whiteoutsurvival.centurygames.com/favicon.png" type="image/png" />
       </head>
-      <body>
+      <body className="bg-white text-zinc-800">
         {children}
       </body>
     </html>
