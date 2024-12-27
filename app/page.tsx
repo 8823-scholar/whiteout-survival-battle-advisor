@@ -1,7 +1,7 @@
 const Page = () => {
   return (
     <div>
-      <h1 className="font-bold text-lg">
+      <h1 className="text-clip text-lg font-bold">
         ホワサババトルシミュレータ
       </h1>
     </div>
