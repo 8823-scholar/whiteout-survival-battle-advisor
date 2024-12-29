@@ -3,7 +3,7 @@ import { BattleAdvisorForm } from "@/forms/BattleAdvisorForm";
 import { useBattleAdvisorForm } from "@/hooks/useBattleAdvisorForm";
 
 export const BattleAdvisorPage = () => {
-  const { form, fields } = useBattleAdvisorForm();
+  const form = useBattleAdvisorForm();
 
   return (
     <div>
@@ -11,8 +11,7 @@ export const BattleAdvisorPage = () => {
         ホワサババトルシミュレータ
       </h1>
       <BattleAdvisorForm
-        form={form}
-        fields={fields}
+        {...form}
         className="p-4"
       />
     </div>
